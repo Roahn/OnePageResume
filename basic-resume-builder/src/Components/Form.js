@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Data from './data';
-export default class From extends Component {
+export default class Form extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -31,92 +31,126 @@ export default class From extends Component {
     return (
       <>
         <section className='PreViewContainer'>
-          <br />
-          <label> Name</label>
-          <input
-            type='text'
-            value={this.state.Name}
-            onChange={(event) => this.handleChange(event, 'Name')}
-          />
-          <br />
-          <label>Profile</label>
-          <input
-            type='text'
-            value={this.state.Profile}
-            onChange={(event) => this.handleChange(event, 'Profile')}
-          />
+          <form>
+            <br />
+            <label className='form-label'> Name</label>
+            <input
+              className='form-control'
+              type='text'
+              value={this.state.Name}
+              onChange={(event) => this.handleChange(event, 'Name')}
+            />
+            <br />
+            <label className='form-label'>Profile</label>
+            <input
+              className='form-control'
+              type='text'
+              value={this.state.Profile}
+              onChange={(event) => this.handleChange(event, 'Profile')}
+            />
 
-          <br />
-          <label>Email</label>
-          <input
-            type='text'
-            value={this.state.Email}
-            onChange={(event) => this.handleChange(event, 'Email')}
-          />
-          <br />
-          <label>Mobile Number</label>
-          <input
-            type='text'
-            value={this.state.MobileNo}
-            onChange={(event) => this.handleChange(event, 'MobileNo')}
-          />
-          <br></br>
-          <label>Address</label>
-          <input
-            type='text'
-            value={this.state.Address}
-            onChange={(event) => this.handleChange(event, 'Address')}
-          />
-          <br></br>
-          <label>Summary</label>
-          <input
-            type='text'
-            value={this.state.Summary}
-            onChange={(event) => this.handleChange(event, 'Summary')}
-          />
+            <br />
 
-          <br />
-          <label>Skills</label>
-          <input
-            type='text'
-            value={this.state.Skills}
-            onChange={(event) => this.handleChange(event, 'Skills')}
-          />
-          <br />
-          <label>Technical</label>
-          <input
-            type='text'
-            value={this.state.Technical}
-            onChange={(event) => this.handleChange(event, 'Technical')}
-          />
+            {/* <label className='form-label'>Email</label>
+            <input
+              type='text'
+              value={this.state.Email}
+              onChange={(event) => this.handleChange(event, 'Email')}
+            /> */}
+            <div class='mb-3'>
+              <label for='exampleFormControlInput1' class='form-label'>
+                Email address
+              </label>
+              <input
+                type='email'
+                className='form-control'
+                id='exampleFormControlInput1'
+                placeholder='name@example.com'
+                value={this.state.Email}
+                onChange={(event) => this.handleChange(event, 'Email')}
+              />
+            </div>
+            <br />
+            <label className='form-label'>Mobile Number</label>
+            <input
+              className='form-control'
+              type='text'
+              value={this.state.MobileNo}
+              onChange={(event) => this.handleChange(event, 'MobileNo')}
+            />
+            <br></br>
+            <label className='form-label'>Address</label>
+            <input
+              className='form-control'
+              type='text'
+              value={this.state.Address}
+              onChange={(event) => this.handleChange(event, 'Address')}
+            />
+            <br></br>
+            <div class='mb-3'>
+              <label for='exampleFormControlTextarea1' class='form-label'>
+                Summary
+              </label>
+              <textarea
+                class='form-control'
+                id='exampleFormControlTextarea1'
+                rows='3'
+                type='text'
+                value={this.state.Summary}
+                onChange={(event) => this.handleChange(event, 'Summary')}
+              ></textarea>
+              {/* <input
+                type='text'
+                value={this.state.Summary}
+                onChange={(event) => this.handleChange(event, 'Summary')}
+              /> */}
+            </div>
 
-          <br />
-          <label>Education</label>
-          <input
-            type='text'
-            value={this.state.Education}
-            onChange={(event) => this.handleChange(event, 'Education')}
-          />
+            <br />
+            <label className='form-label'>Skills</label>
+            <input
+              className='form-control'
+              type='text'
+              value={this.state.Skills}
+              onChange={(event) => this.handleChange(event, 'Skills')}
+            />
+            <br />
+            <label className='form-label'>Technical</label>
+            <input
+              className='form-control'
+              type='text'
+              value={this.state.Technical}
+              onChange={(event) => this.handleChange(event, 'Technical')}
+            />
 
-          
+            <br />
+            <label className='form-label'>Education</label>
+            <input
+              className='form-control'
+              type='text'
+              value={this.state.Education}
+              onChange={(event) => this.handleChange(event, 'Education')}
+            />
 
-          <br />
-          <label>Projects</label>
-          <input
-            type='text'
-            value={this.state.Projects}
-            onChange={(event) => this.handleChange(event, 'Projects')}
-          />
-          <br />
-          <label>Experience</label>
-          <input
-            type='text'
-            value={this.state.Experience}
-            onChange={(event) => this.handleChange(event, 'Experience')}
-          />
+            <br />
+            <label className='form-label'>Projects</label>
+            <input
+              className='form-control'
+              type='text'
+              value={this.state.Projects}
+              onChange={(event) => this.handleChange(event, 'Projects')}
+            />
+            <br />
+            <label className='form-label'>Experience</label>
+            <input
+              className='form-control'
+              type='text'
+              value={this.state.Experience}
+              onChange={(event) => this.handleChange(event, 'Experience')}
+            />
 
-          <br />
-
+            <br />
+          </form>
           <Link to='/pre'>Form Data</Link>
         </section>
       </>

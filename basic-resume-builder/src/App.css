@@ -1,15 +1,19 @@
-.parent {
-  /* border: 1px solid black; */
-  margin: 1rem;
-  padding: 2rem 2rem;
-  text-align: center;
+body{
+
+
+  background-color: #ece5c755;
 }
 .PreViewContainer
 {
- display: inline-block;
-  border: 1px solid red;
+  
+  /* border: 1px solid red; */
+  /* background-color: #ece5c755; */
+  background-color: #c2ded155;
+  
   padding: 1rem 1rem;
-  vertical-align: middle;
-  width: 40%;
-  height: 100%;
+  margin:auto;
+  border-radius: 30px;
+border-shadow: 1px 2px 1px black;
+  width: 50%;
+
 }

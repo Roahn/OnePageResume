@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Data from './data';
 import { Link } from 'react-router-dom';
 import HTML from './HTMLTemp';
+import A from './A';
 export default class Preview extends Component {
   // constructor(props) {
   //   super(props);
@@ -14,6 +15,7 @@ export default class Preview extends Component {
 
     return (
       <>
+        
         {/* <div>
           <h1>{obj.GetData().Name}</h1>
           <h1>{obj.GetData().MobileNo}</h1>
@@ -23,8 +25,14 @@ export default class Preview extends Component {
           <h1>{obj.GetData().Experience}</h1>
           <h1>{obj.GetData().Skills}</h1>
         </div> */}
-        <HTML obj={obj.GetData()}></HTML>
-        <Link to='/'>Back</Link>
+
+        {/* <HTML obj={obj.GetData()}></HTML> */}
+         <Link to='/'>Back</Link>
+        <A></A>
+       
+
+       
+        
       </>
     );
   }
