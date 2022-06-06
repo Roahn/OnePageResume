@@ -8,81 +8,106 @@ import {
   View,
   Font,
 } from '@react-pdf/renderer';
- 
 
 const PDFFile = (props) => {
- 
- 
   let {
     Name,
     Profile,
+    Summary,
     Email,
     MobileNo,
+    LinkedIn,
+    Github,
+    Education1,
+    Education2,
+    Education3,
+    Projects1,
+    Projects2,
+    Projects3,
+    Projects1D,
+    Projects2D,
+    Projects3D,
     Address,
-    Summary,
     Skills,
     Technical,
     Education,
     Projects,
     Experience,
   } = props.obj;
- return (
-   <Document>
-     <Page style={styles.body}>
-       <Text style={styles.header} fixed>
-         ~ Created with react-pdf ~
-       </Text>
 
-       <Text style={styles.Name}>{Name}</Text>
-       <Text style={styles.Profile}>{Profile}</Text>
-       <Text style={styles.Summary}>{Summary}</Text>
+  console.log(props.obj.Skills)
+  return (
+    <Document>
+      <Page style={styles.body}>
+        <Text style={styles.Name}>{Name}</Text>
+        <Text style={styles.Profile}>{Profile} </Text>
+        <Text style={styles.Summary}>{Summary}</Text>
 
-       <Text style={styles.Email1}>Email :{Email}</Text>
-       <Text style={styles.Email}>Address: {Address}</Text>
-       <Text style={styles.Email}>Github:</Text>
-       <Text style={styles.Email}>Mobile No : {MobileNo}</Text>
-       <Text style={styles.Email}>LinkedIn :</Text>
+        <div style={styles.Parent}>
+          <Text style={styles.Email}>Email : {Email}</Text>
+          <Text style={styles.Email}>LinkedIn :{LinkedIn}</Text>
+        </div>
 
-       <Text style={styles.Education}>Education :</Text>
-       <Text style={styles.EducationText}>{Education}</Text>
-       <Text style={styles.Education}>Projects</Text>
-       <Text style={styles.EducationText}>{Projects}</Text>
-       <Text style={styles.Education}>Technical Skills:</Text>
-       <Text style={styles.EducationText}>{Technical}</Text>
-       <Text style={styles.Education}>Certificates:</Text>
-       <Text style={styles.EducationText}>
-         eyugygygtygtygyufgyufgyufgygfygygyfgrgrwygygrygyrgygrygyrwgygrygrygygrwgrygfygsfygsfugfsyug
-       </Text>
-       <Text style={styles.Education}>Achievements :</Text>
-       <Text style={styles.EducationText}></Text>
+        <br />
+        <div style={styles.Parent}>
+          <Text style={styles.Email}>Github:{Github}/</Text>
+          <Text style={styles.Email}>Mobile No : {MobileNo} </Text>
+        </div>
 
-       <Text style={styles.Education}>Experience :</Text>
-       <Text style={styles.EducationText}>{Experience}</Text>
-       <Text
-         style={styles.pageNumber}
-         render={({ pageNumber, totalPages }) =>
-           `${pageNumber} / ${totalPages}`
-         }
-         fixed
-       />
-     </Page>
-   </Document>
- );
+        <Text style={styles.Education}>Education :</Text>
 
-Font.register({
-  family: 'Oswald',
-  src: 'https://fonts.gstatic.com/s/oswald/v13/Y_TKV6o8WovbUd3m_X9aAA.ttf',
-})};
+        <Text style={styles.EducationText}>{Education1}</Text>
+        <Text style={styles.EducationText}>{Education2}</Text>
+        <Text style={styles.EducationText}>{Education3}</Text>
+
+        <Text style={styles.Education}>Skills :</Text>
+
+        <div style={styles.Parent}>
+          <Text style={styles.EducationText}>{Skills}</Text>
+        </div>
+
+        <Text style={styles.Education}>Projects</Text>
+        <br />
+        <Text style={styles.Education}>{Projects1}</Text>
+        <Text style={styles.EducationText}>{Projects1D}</Text>
+        <Text style={styles.Education}>{Projects2}</Text>
+        <Text style={styles.EducationText}>{Projects2D}</Text>
+        <Text style={styles.Education}>{Projects3}</Text>
+        <Text style={styles.EducationText}>{Projects3D}</Text>
+
+        {/* <Text style={styles.header} fixed>
+          ~ Created with Rohan Magar ~
+        </Text> */}
+        <Text
+          style={styles.pageNumber}
+          render={({ pageNumber, totalPages }) =>
+            `${pageNumber} / ${totalPages}`
+          }
+          fixed
+        />
+      </Page>
+    </Document>
+  );
+
+  Font.register({
+    family: 'Oswald',
+    src: 'https://fonts.gstatic.com/s/oswald/v13/Y_TKV6o8WovbUd3m_X9aAA.ttf',
+  });
+};
 
 const styles = StyleSheet.create({
+  Parent: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
   Profile: {
-    fontSize: 10,
+    fontSize: 15,
     marginLeft: 15,
   },
   Summary: {
     fontSize: 12,
-    marginLeft: 9,
-    width: 340,
+    marginLeft: 19,
+    width: 440,
   },
   Education: {
     fontSize: 15,
@@ -92,13 +117,13 @@ const styles = StyleSheet.create({
   },
   EducationText: {
     fontSize: 13,
-    marginLeft: 9,
+    marginLeft: 29,
     marginTop: 10,
     width: 500,
   },
 
   Name: {
-    fontSize: 15,
+    fontSize: 25,
     marginLeft: 9,
     width: 340,
   },
@@ -109,8 +134,9 @@ const styles = StyleSheet.create({
   },
   Email: {
     fontSize: 12,
-    marginLeft: 100,
+    marginLeft: 30,
     marginTop: 9,
+    flex: 1,
   },
 
   body: {
