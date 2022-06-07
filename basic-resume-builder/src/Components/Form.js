@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import '../index.css';
 import Data from './data';
 export default class Form extends Component {
   constructor(props) {
@@ -215,9 +216,10 @@ export default class Form extends Component {
               onChange={(event) => this.handleChange(event, 'Projects3D')}
             />
             <br />
-          
           </form>
-          <Link to='/pre'>Form Data</Link>
+          <button className='btn btn-primary'>
+            <Link to='/pre'>Download Page</Link>
+          </button>
         </section>
       </>
     );

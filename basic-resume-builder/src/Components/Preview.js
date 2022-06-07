@@ -27,7 +27,7 @@ export default class Preview extends Component {
         </div> */}
 
         {/* <HTML obj={obj.GetData()}></HTML> */}
-         <Link to='/'>Back</Link>
+         {/* <Link to='/'>Back</Link> */}
         <A></A>
        
 
