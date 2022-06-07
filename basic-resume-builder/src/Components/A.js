@@ -5,11 +5,13 @@ import { PDFDownloadLink } from '@react-pdf/renderer';
 import Data from './data';
 function A() {
  let obj = new Data();
+ let name = obj.GetData().Name;
+ console.log(name);
   return (
     <div className='App'>
       <PDFDownloadLink
         document={<PDFFile obj={obj.GetData()}></PDFFile>}
-        fileName='Form'
+        fileName={name}
       >
         {({ loading }) =>
           loading ? (
