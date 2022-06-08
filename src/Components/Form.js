@@ -25,7 +25,7 @@ export default class Form extends Component {
       Projects2D: localStorage.getItem('Projects2D'),
       Projects3: localStorage.getItem('Projects3'),
       Projects3D: localStorage.getItem('Projects3D'),
-      Experience: localStorage.getItem('Experience'),
+      Highlights: localStorage.getItem('Highlights'),
     };
   }
   handleChange = (event, props) => {
@@ -40,6 +40,7 @@ export default class Form extends Component {
     d1.GetData();
     return (
       <>
+        <h1 style={{ textAlign: 'center' }}>Resume Builder App</h1>
         <section className='PreViewContainer'>
           <form>
             <br />
@@ -216,6 +217,24 @@ export default class Form extends Component {
               onChange={(event) => this.handleChange(event, 'Projects3D')}
             />
             <br />
+            <div class='mb-3'>
+              <label for='exampleFormControlTextarea1' class='form-label'>
+                Highlights
+              </label>
+              <textarea
+                class='form-control'
+                id='exampleFormControlTextarea1'
+                rows='3'
+                type='text'
+                value={this.state.Highlights}
+                onChange={(event) => this.handleChange(event, 'Highlights')}
+              ></textarea>
+              {/* <input
+          type='text'
+          value={this.state.Summary}
+          onChange={(event) => this.handleChange(event, 'Summary')}
+        /> */}
+            </div>
           </form>
           <button className='btn btn-primary'>
             <Link to='/pre'>Download Page</Link>

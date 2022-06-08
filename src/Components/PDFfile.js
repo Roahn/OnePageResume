@@ -2,10 +2,10 @@ import React from 'react';
 import {
   Page,
   Text,
-  Image,
+  // Image,
   Document,
   StyleSheet,
-  View,
+  // View,
   Font,
 } from '@react-pdf/renderer';
 
@@ -27,12 +27,12 @@ const PDFFile = (props) => {
     Projects1D,
     Projects2D,
     Projects3D,
-    Address,
+    // Address,
     Skills,
-    Technical,
-    Education,
-    Projects,
-    Experience,
+    // Technical,
+    // Education,
+    // Projects,
+    // Experience,
   } = props.obj;
 
   console.log(props.obj.Skills)
@@ -89,12 +89,12 @@ const PDFFile = (props) => {
     </Document>
   );
 
-  Font.register({
+  
+};
+Font.register({
     family: 'Oswald',
     src: 'https://fonts.gstatic.com/s/oswald/v13/Y_TKV6o8WovbUd3m_X9aAA.ttf',
   });
-};
-
 const styles = StyleSheet.create({
   Parent: {
     display: 'flex',

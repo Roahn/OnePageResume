@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Data from './data';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import HTML from './HTMLTemp';
 import A from './A';
 export default class Preview extends Component {
@@ -26,7 +26,7 @@ export default class Preview extends Component {
           <h1>{obj.GetData().Skills}</h1>
         </div> */}
 
-        {/* <HTML obj={obj.GetData()}></HTML> */}
+        <HTML obj={obj.GetData()}></HTML>
          {/* <Link to='/'>Back</Link> */}
         <A></A>
        

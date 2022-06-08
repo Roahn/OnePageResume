@@ -1,6 +1,6 @@
 
 import PDFFile from './PDFfile';
-import HTML from './HTMLTemp'
+// import HTML from './HTMLTemp'
 import { PDFDownloadLink } from '@react-pdf/renderer';
 import Data from './data';
 function A() {
