@@ -20,7 +20,7 @@ export default function HTMLTemp(props) {
     Projects1D,
     Projects2D,
     Projects3D,
-    Highlights,
+    Highlights, 
     Address,
     Skills,
   } = props.obj;
